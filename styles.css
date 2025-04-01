@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 40px;
+}
+
+.mode-btn {
+    background-color: hsl(174, 100%, 30%);
+    color: hsl(0, 0%, 100%);
+    padding: 4px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-block: 20px;
+}
+
+form {
+    max-width: 400px;
+}
+
+form .input {
+    width: 250px;
+    padding: 6px 12px;
+    border: 1px solid hsl(120, 39%, 50%);
+    border-radius: 4px;
+    outline: none;
+}
+
+form > button {
+    background-color: hsl(120, 39%, 50%);
+    color: hsl(0, 0%, 100%);
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.mode-btn:hover, form > button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+    opacity: 0.8;
+}
+
+.todo-div {
+    width: 340px;
+    background-color: hsl(0, 0%, 18%);
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: opacity 0.3s, transform 0.3s ease;
+}
+
+.todo-text {
+    word-wrap: break-word;
+}
+
+.todo-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-div.fade-out {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.dark {
+    background-color: hsl(0, 0%, 7%);
+    color: hsl(0, 0%, 88%);
+}
+
+body, main {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in;
+}
