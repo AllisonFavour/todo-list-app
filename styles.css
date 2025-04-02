@@ -47,7 +47,9 @@ form .input {
     outline: none;
 }
 
-form > button {
+form > button,
+.edit-btn,
+.delete-btn {
     background-color: hsl(120, 39%, 50%);
     color: hsl(0, 0%, 100%);
     font-size: 0.8rem;
@@ -56,6 +58,12 @@ form > button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+.delete-btn {
+    background-color: hsl(0, 90%, 60%);
+}
+.delete-btn:hover {
+    opacity: 0.8;
 }
 
 .mode-btn:hover, form > button:hover {
@@ -79,11 +87,16 @@ form > button {
 
 .todo-text {
     word-wrap: break-word;
+    padding: 10px;
 }
 
 .todo-actions {
     display: flex;
     justify-content: space-between;
+}
+
+.completed {
+    color: hsl(120, 39%, 50%);
 }
 
 .todo-div.fade-out {
